@@ -18,12 +18,12 @@ def sign_upload(request):
         s3_client = boto3.client(
             's3',
             endpoint_url="https://s3.ir-thr-at1.arvanstorage.ir",
-            aws_access_key_id='c6bdd3a6-cb85-4a30-8c02-512d3869e8fe',
-            aws_secret_access_key='5ec861e032e2f377d243cf2a339d9c0b167cd623d55f98999fe92e0bb4409020'
+            aws_access_key_id='5c719c97-99a3-4e81-940e-a7af8bc5c15a',
+            aws_secret_access_key='66ee8a5a1ebae6163a672d87adcda04769d7bf61fbc897765140c49d4a2723ff'
         )
 
         response = s3_client.generate_presigned_post(
-            'test-upload-file',
+            'upser',
             file_name,
             Fields={
                 'acl': 'public-read'
